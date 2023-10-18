@@ -1,0 +1,10 @@
+public class Biblioteca {
+    public static void main(String[] args) {
+        Estante minhaEstante = new Estante();
+        
+        
+        Livro.adicionarLivro(minhaEstante);
+        minhaEstante.mostrarEstante();
+    }
+  
+}
