@@ -1,0 +1,45 @@
+ import javax.swing.JOptionPane;
+    public class Livro {
+       private String titulo;
+       private String autor;
+       private String genero;
+       
+       
+       
+       public static void adicionarLivro(Estante novaEstante){
+         int sim = Integer.parseInt(JOptionPane.showInputDialog(null, "Quer adicionar um livro à estante? Se sim, digite 1"));
+            if (sim == 1) {
+                String titulo = JOptionPane.showInputDialog("Digite o título do livro: ");
+                String autor = JOptionPane.showInputDialog("Digite o autor do livro: ");
+                String genero = JOptionPane.showInputDialog("Digite o gênero do livro: ");
+    
+                Livro novoLivro = new Livro();
+                novoLivro.setTitulo(titulo);
+                novoLivro.setAutor(autor);
+                novoLivro.setGenero(genero);
+    
+                novaEstante.incluirEstante(novoLivro);
+         }
+       }
+       
+       public  void livro(String titulo, String autor, String genero){
+         this.titulo=titulo;
+         this.autor=autor;
+         this.genero=genero;
+       }
+       
+       public void setTitulo(String titulo){
+           this.titulo=titulo;
+       }
+       
+       public String getTitulo(){
+           return titulo;
+       }
+       
+       public void setAutor(String autor){
+           this.autor=autor;
+       }
+        public String getAutor(){
+           return autor;
+       }  
+}
