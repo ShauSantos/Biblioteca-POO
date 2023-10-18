@@ -1,0 +1,22 @@
+import java.util.ArrayList;
+public class Estante {
+    
+          
+           private ArrayList<Livro> estante = new ArrayList<>();
+
+             public void incluirEstante(Livro livro) {
+             estante.add(livro);
+    }
+
+               public void removerEstante(Livro livro) {
+                estante.remove(livro);
+    }
+         public void mostrarEstante(){
+             for (Livro livro : estante) {
+            System.out.println("Título: " + livro.getTitulo());
+            System.out.println("Autor: " + livro.getAutor());
+            System.out.println("Gênero: " + livro.getGenero());
+            System.out.println();
+        }
+         }
+   }
